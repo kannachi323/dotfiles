@@ -1,0 +1,5 @@
+require("kannachi.config.clipboard")
+require("kannachi.config.options")
+require("kannachi.config.commands")
+require("kannachi.config.keymaps")
+require("kannachi.config.lazy")
