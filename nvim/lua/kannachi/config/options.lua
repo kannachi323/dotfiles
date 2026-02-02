@@ -21,4 +21,4 @@ opt.swapfile = false
 
 opt.guicursor = "n-v-c-i:block"
 
-opt.mouse = ""
+opt.clipboard = "unnamedplus"
