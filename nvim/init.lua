@@ -1,1 +1,1 @@
-require("kannachi.config")
+require("kannachi")

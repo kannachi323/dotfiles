@@ -1,3 +1,3 @@
+require("kannachi.config.set")
+require("kannachi.config.remap")
 require("kannachi.config.lazy")
-require("kannachi.config.options")
-require("kannachi.config.ft_settings")
