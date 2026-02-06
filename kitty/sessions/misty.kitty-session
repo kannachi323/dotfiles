@@ -1,0 +1,12 @@
+new_os_window
+
+layout splits
+
+cd ~/projects/misty
+launch --cwd=~/projects/misty nvim .
+
+cd ~/projects/misty
+launch --location=vsplit --cwd=~/projects/misty
+
+cd ~/projects/misty
+launch --location=hsplit --cwd=~/projects/misty

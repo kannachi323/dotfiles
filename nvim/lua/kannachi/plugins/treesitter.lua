@@ -4,7 +4,7 @@ return {
     build = ':TSUpdate',
     
     config = function()
-        local configs = require("nvim-treesitter")
+        local configs = require("nvim-treesitter.configs")
         configs.setup({
                 ensure_installed = { "lua", "javascript", "typescript", "c", "cpp", "python", "go" },
                 sync_install = false,
