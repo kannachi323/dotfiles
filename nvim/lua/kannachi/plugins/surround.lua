@@ -1,5 +1,9 @@
 return {
     "echasnovski/mini.surround",
+    keys = {
+      { "sa", mode = { "n", "v" } },
+      "sd", "sf", "sF", "sh", "sr", "sn",
+    },
     opts = {
       mappings = {
         add = "sa",            -- Add surrounding (Normal and Visual)
