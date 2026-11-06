@@ -16,6 +16,14 @@ config.skip_close_confirmation_for_processes_named = {}
 
 config.background = {
   { source = { Color = '#282828' }, width = '100%', height = '100%' },
+  {
+    source = { File = wezterm.home_dir .. '/dotfiles/chizu.jpg' },
+    opacity = 0.05,
+    width = 'Cover',
+    height = 'Cover',
+    horizontal_align = 'Center',
+    vertical_align = 'Middle',
+  },
 }
 
 config.keys = {
