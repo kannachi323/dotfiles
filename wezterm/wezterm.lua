@@ -14,23 +14,8 @@ config.window_padding = { left = 8, right = 8, top = 0, bottom = 0 }
 -- Always ask before closing, even when only a shell is running.
 config.skip_close_confirmation_for_processes_named = {}
 
-local background_image
-if is_windows then
-  background_image = 'C:\\Users\\mtcco\\Pictures\\bg\\chizu.jpg'
-else
-  background_image = wezterm.home_dir .. '/.config/fastfetch/chizu.png'
-end
-
 config.background = {
   { source = { Color = '#282828' }, width = '100%', height = '100%' },
-  {
-    source = { File = background_image },
-    opacity = 0.05,
-    width = 'Cover',
-    height = 'Cover',
-    horizontal_align = 'Center',
-    vertical_align = 'Middle',
-  },
 }
 
 config.keys = {
