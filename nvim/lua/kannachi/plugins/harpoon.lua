@@ -1,15 +1,24 @@
+local function workspace()
+    return require("kannachi.config.harpoon")
+end
+
 return {
     "ThePrimeagen/harpoon",
-    dependencies = { "nvim-lua/plenary.nvim" },
+    branch = "harpoon2",
+    cmd = { "HarpoonList" },
+    dependencies = { "nvim-lua/plenary.nvim", "nvim-telescope/telescope.nvim" },
+    config = function() workspace().setup() end,
     keys = {
-        { "<leader>mm", function() require("harpoon.mark").add_file() end, desc = "harpoon mark file" },
-        { "<leader>hf", function() require("harpoon.ui").toggle_quick_menu() end, desc = "harpoon quick menu" },
-        { "<leader>1", function() require("harpoon.ui").nav_file(1) end, desc = "navigate to file 1" },
-        { "<leader>2", function() require("harpoon.ui").nav_file(2) end, desc = "navigate to file 2" },
-        { "<leader>3", function() require("harpoon.ui").nav_file(3) end, desc = "navigate to file 3" },
-        { "<leader>4", function() require("harpoon.ui").nav_file(4) end, desc = "navigate to file 4" },
-        { "<leader>5", function() require("harpoon.ui").nav_file(5) end, desc = "navigate to file 5" },
-        { "<leader>hh", function() require("harpoon.ui").nav_next() end, desc = "navigate to next mark" },
-        { "<leader>hl", function() require("harpoon.ui").nav_prev() end, desc = "navigate to prev mark" },
+        { "<leader>mm", function() workspace().add() end, desc = "Harpoon mark file" },
+        { "<leader>hf", function() workspace().menu() end, desc = "Harpoon active list" },
+        { "<leader>hs", function() workspace().pick() end, desc = "Harpoon switch list" },
+        { "<leader>hn", function() workspace().create() end, desc = "Harpoon new list" },
+        { "<leader>1", function() workspace().list():select(1) end, desc = "Harpoon file 1" },
+        { "<leader>2", function() workspace().list():select(2) end, desc = "Harpoon file 2" },
+        { "<leader>3", function() workspace().list():select(3) end, desc = "Harpoon file 3" },
+        { "<leader>4", function() workspace().list():select(4) end, desc = "Harpoon file 4" },
+        { "<leader>5", function() workspace().list():select(5) end, desc = "Harpoon file 5" },
+        { "<leader>hh", function() workspace().list():next({ ui_nav_wrap = true }) end, desc = "Harpoon next file" },
+        { "<leader>hl", function() workspace().list():prev({ ui_nav_wrap = true }) end, desc = "Harpoon previous file" },
     },
 }
