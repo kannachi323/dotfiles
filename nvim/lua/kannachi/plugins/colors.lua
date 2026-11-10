@@ -45,6 +45,8 @@ return {
           NormalFloat  = { bg = "none" },
           NormalNC     = { bg = "none" },
           SignColumn   = { bg = "none" },
+          -- Keep colorcolumn = 100 set, but don't draw the shaded bar.
+          ColorColumn  = { bg = "none" },
         }
 
         for group, opts in pairs(hl_groups) do
