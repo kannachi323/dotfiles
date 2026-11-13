@@ -16,7 +16,10 @@ return {
         local configs = require("nvim-treesitter.configs")
         configs.setup({
             ensure_installed = { "lua", "javascript", "typescript", "c", "cpp",
-                "python", "go", "markdown", "markdown_inline"
+                "python", "go", "markdown", "markdown_inline",
+                -- Neovim's own ftplugins (query, vim, help) call vim.treesitter.start() and
+                -- this Homebrew build ships no bundled parsers, so install them here.
+                "query", "vim", "vimdoc",
             },
                 sync_install = false,
                 auto_install = true,
